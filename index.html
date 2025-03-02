@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <title>Table Tennis Attendance</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="manifest" href="manifest.json">
+    <link rel="apple-touch-icon" href="images/icon-192.png">
+</head>
+<body>
+    <div class="app-container">
+        <header>
+            <h1>Table Tennis Club</h1>
+            <h2>Attendance Tracker</h2>
+            <div class="date-selector">
+                <button id="prev-date">←</button>
+                <span id="current-date">Today</span>
+                <button id="next-date">→</button>
+            </div>
+        </header>
+
+        <main>
+            <section class="attendance-section">
+                <h3>Regular Members</h3>
+                <div id="regular-members" class="members-grid">
+                    <!-- Regular members will be added here by JavaScript -->
+                </div>
+                
+                <h3>Ad-hoc Signups</h3>
+                <div id="adhoc-members" class="members-grid">
+                    <!-- Ad-hoc members will be added here by JavaScript -->
+                </div>
+            </section>
+            
+            <section class="stats-section">
+                <div class="attendance-summary">
+                    <p>Present: <span id="present-count">0</span>/18</p>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <button id="save-btn" class="primary-btn">Save Attendance</button>
+            <button id="history-btn">View History</button>
+        </footer>
+    </div>
+
+    <!-- History Modal -->
+    <div id="history-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Attendance History</h2>
+            <div id="history-content"></div>
+        </div>
+    </div>
+
+    <script src="js/app.js"></script>
+</body>
+</html> 
